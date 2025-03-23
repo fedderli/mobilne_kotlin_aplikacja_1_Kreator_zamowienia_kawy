@@ -41,7 +41,7 @@
                 />
 
                 <RadioGroup
-                    android:id="@+id/coffy_radiogroup"
+                    android:id="@+id/coffyRadioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -51,6 +51,7 @@
                         android:id="@+id/espresso_radiobutton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="true"
                         android:text="espresso" />
 
                     <RadioButton
@@ -79,16 +80,17 @@
                 />
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
                 <CheckBox
-                    android:id="@+id/sugar"
+                    android:id="@+id/sugarCheckBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cukier"
                     android:layout_margin="10dp"
                 />
                 <CheckBox
-                    android:id="@+id/milk"
+                    android:id="@+id/milkCheckBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mleko"
@@ -99,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_gravity="center"
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,7 +111,7 @@
                     android:textStyle="bold"
                     android:textColor="#111111"
                     android:padding="10dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     />
 
                 <SeekBar
@@ -132,7 +135,7 @@
                     android:textStyle="bold"
                     android:textColor="#111111"
                     android:padding="10dp"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
@@ -144,7 +147,16 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="10dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:onClick="orderButtonClick"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coffyImigeView"
+                android:layout_gravity="center"
+                android:src="@drawable/espresso"
+                />
         </LinearLayout>
 
 
