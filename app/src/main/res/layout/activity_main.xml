@@ -1,19 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#6e4030"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="700dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#F5FADC"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#F5FADC"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wybierz kawe: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+                <RadioGroup
+                    android:id="@+id/coffy_radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <RadioButton
+                        android:id="@+id/espresso_radiobutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="espresso" />
+
+                    <RadioButton
+                        android:id="@+id/cappuccino_radiobutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cappuccino" />
+
+                    <RadioButton
+                        android:id="@+id/latte_radiobutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="latte" />
+
+                </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Czy chcesz dodac:  "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/sugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cukier"
+                    android:layout_margin="10dp"
+                />
+                <CheckBox
+                    android:id="@+id/milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mleko"
+                    android:layout_margin="10dp"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Podaj ilosc sztuk : "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111111"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <SeekBar
+                    android:id="@+id/coffySeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="1"
+                    android:progressBackgroundTint="#abc123"
+                    android:progressTint="#9243ff"
+                    android:thumbTint="#009999"
+
+                    />
+
+                <TextView
+                    android:id="@+id/coffySeekBar_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ilosc : 1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111111"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/orderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Złóż zamowienie"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
